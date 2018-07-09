@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/materialize.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+
+  <!-- Navbar goes here -->
+
+  <!-- Page Layout here -->
+  <div class="row">
+
+    <div class="col s3">
+      <!-- Grey navigation panel -->
+      {% include 'main/sidenav.html' %}
+    </div>
+
+    <div class="col s9">
+      <!-- Teal page content  -->
+      {% block content %}
+      {% endblock %}
+    </div>
+
+  </div>
+
+</body>
+</html>
